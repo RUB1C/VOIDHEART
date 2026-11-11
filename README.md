@@ -115,4 +115,4 @@ Cuando una característica en tu rama `feature/` esté lista, probada y funciona
 Desarrollado por 
 David Ernesto Ospina Piñeros (R1UB1Q)
 Juan David Reyes Lazo (JReyes765)
-Andres Mateo Boada Baquero ().
+Andres Mateo Boada Baquero (Matcora).
