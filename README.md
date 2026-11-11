@@ -82,7 +82,7 @@ Está estrictamente prohibido commitear o hacer push directamente sobre la rama 
   * **Propósito:** Rama de producción. Contiene únicamente versiones estables, probadas y funcionales del juego.
   * **Reglas:** No se edita directamente. Solo recibe fusiones (merges) provenientes de las `feature` mediante Pull Request validado.
 * `feature/<nombre-de-la-tarea>`
-  * **Propósito:** Ramas temporales creadas a partir de `dev` para desarrollar mecánicas, scripts, niveles o apartados visuales específicos (ej: `feature/sistema-de-iluminacion`, `feature/movimiento-jugador`).
+  * **Propósito:** Ramas temporales creadas a partir de `main` para desarrollar mecánicas, scripts, niveles o apartados visuales específicos (ej: `feature/sistema-de-iluminacion`, `feature/movimiento-jugador`).
 
 ---
 
