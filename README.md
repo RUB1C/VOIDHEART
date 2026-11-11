@@ -27,14 +27,23 @@ VOIDHEART es un proyecto de terror y supervivencia que combina los controles pre
 ## 📂 Estructura del Proyecto
 
 voidheart/
+
 ├── assets/
+
 │   ├── sprites/       # Hojas de sprites de personajes y enemigos y mapas de normales
+
 │   ├── environments/  # Capas de parallax y arte de fondos
+
 │   └── audio/         # Efectos de sonido y bandas sonoras ambientales
+
 ├── scenes/
+
 │   ├── levels/        # Niveles del juego y escenas de habitaciones
+
 │   └── entities/      # Jugador, enemigos y objetos interactivos
+
 └── scripts/           # Controladores en GDScript y lógica del juego
+
 
 🚀 Primeros Pasos
 Para clonar y probar el proyecto de manera local:
