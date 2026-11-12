@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://buru5i32vkxve"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5iqjx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx8n8"]
+size = Vector2(1152, 10)
+
+[node name="Escena_base" type="Node2D" unique_id=442958033]
+position = Vector2(1, 628)
+
+[node name="Plano_trasero" type="Parallax2D" parent="." unique_id=2016372374]
+scroll_scale = Vector2(0.2, 0.2)
+
+[node name="Fondo_lejano" type="Sprite2D" parent="Plano_trasero" unique_id=397664618]
+
+[node name="Capa_juego" type="Node2D" parent="." unique_id=2120215362]
+
+[node name="Limite_escenario" type="StaticBody2D" parent="Capa_juego" unique_id=2068482911]
+physics_material_override = SubResource("PhysicsMaterial_5iqjx")
+
+[node name="Primer_plano" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=645518644]
+position = Vector2(575, 15)
+shape = SubResource("RectangleShape2D_bx8n8")
+
+[node name="Fondo" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=1201922721]
+position = Vector2(575, -433)
+shape = SubResource("RectangleShape2D_bx8n8")
