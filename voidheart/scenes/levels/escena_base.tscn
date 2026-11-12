@@ -8,10 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://bl5f7kk72tvbg" path="res://scenes/objects/cama.tscn" id="5_4eivp"]
 [ext_resource type="PackedScene" uid="uid://fi7vnvnfdy84" path="res://scenes/objects/mesita.tscn" id="6_2q6cl"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5iqjx"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bx8n8"]
 size = Vector2(1152, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
+size = Vector2(119.260445, 641.3329)
 
 [node name="Escena_base" type="Node2D" unique_id=442958033]
 position = Vector2(1, 628)
@@ -28,16 +29,9 @@ position = Vector2(-1, -627)
 [node name="Capa_juego" type="Node2D" parent="." unique_id=2120215362]
 
 [node name="Player" parent="Capa_juego" unique_id=73166647 instance=ExtResource("1_sr8v3")]
-position = Vector2(13, -2)
-
-[node name="Camera2D" type="Camera2D" parent="Capa_juego/Player" unique_id=134130933]
-limit_left = 0
-limit_top = 0
-limit_right = 1152
-limit_bottom = 648
+position = Vector2(654, -238)
 
 [node name="Limite_escenario" type="StaticBody2D" parent="Capa_juego" unique_id=2068482911]
-physics_material_override = SubResource("PhysicsMaterial_5iqjx")
 
 [node name="Primer_plano" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=645518644]
 position = Vector2(575, 15)
@@ -46,6 +40,18 @@ shape = SubResource("RectangleShape2D_bx8n8")
 [node name="Fondo" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=1201922721]
 position = Vector2(575, -353)
 shape = SubResource("RectangleShape2D_bx8n8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=160231412]
+position = Vector2(-7.3276386, -315.86075)
+rotation = 0.13962635
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_5h11f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=1335428692]
+position = Vector2(1155.9998, -315.861)
+rotation = -0.13962634
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_5h11f")
 
 [node name="StaticBody2D" parent="." unique_id=1683587738 instance=ExtResource("4_noodr")]
 position = Vector2(16, -459)
