@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dq3nu6aeyqx1g"]
+
+[node name="Suelo" type="Sprite2D" unique_id=1034777148]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=243430025]
+offset_top = 365.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.049971953, 0.077463485, 0.09735244, 1)
