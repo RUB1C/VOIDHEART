@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://buru5i32vkxve"]
 
+[ext_resource type="PackedScene" uid="uid://cg5l2uo4v27li" path="res://scenes/entities/player.tscn" id="1_sr8v3"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5iqjx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bx8n8"]
@@ -15,6 +17,15 @@ scroll_scale = Vector2(0.2, 0.2)
 
 [node name="Capa_juego" type="Node2D" parent="." unique_id=2120215362]
 
+[node name="Player" parent="Capa_juego" unique_id=73166647 instance=ExtResource("1_sr8v3")]
+position = Vector2(13, -2)
+
+[node name="Camera2D" type="Camera2D" parent="Capa_juego/Player" unique_id=134130933]
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
+
 [node name="Limite_escenario" type="StaticBody2D" parent="Capa_juego" unique_id=2068482911]
 physics_material_override = SubResource("PhysicsMaterial_5iqjx")
 
@@ -23,5 +34,5 @@ position = Vector2(575, 15)
 shape = SubResource("RectangleShape2D_bx8n8")
 
 [node name="Fondo" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=1201922721]
-position = Vector2(575, -433)
+position = Vector2(575, -484)
 shape = SubResource("RectangleShape2D_bx8n8")
