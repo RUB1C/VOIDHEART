@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dvdwi2u3bmqwj"]
+
+[ext_resource type="Script" uid="uid://qrb6awtua3fd" path="res://scripts/audifonos.gd" id="1_n8lwo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+radius = 71.02816
+
+[node name="audifonos" type="Area2D" unique_id=1382283994]
+script = ExtResource("1_n8lwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=753732746]
+shape = SubResource("CircleShape2D_5h11f")
+
+[node name="Label" type="Label" parent="." unique_id=912260911]
+visible = false
+offset_left = -20.0
+offset_top = -123.0
+offset_right = 20.0
+offset_bottom = -65.0
+theme_override_font_sizes/font_size = 42
+text = "E"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
