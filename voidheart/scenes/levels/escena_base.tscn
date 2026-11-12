@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://buru5i32vkxve"]
 
+[ext_resource type="PackedScene" uid="uid://dfp8n6qonwqjm" path="res://scenes/objects/pared.tscn" id="1_4ghbg"]
 [ext_resource type="PackedScene" uid="uid://cg5l2uo4v27li" path="res://scenes/entities/player.tscn" id="1_sr8v3"]
+[ext_resource type="PackedScene" uid="uid://dq3nu6aeyqx1g" path="res://scenes/objects/suelo.tscn" id="3_3f3wo"]
+[ext_resource type="PackedScene" uid="uid://dsatomfk4muiy" path="res://scenes/objects/armario.tscn" id="4_noodr"]
+[ext_resource type="PackedScene" uid="uid://bl5f7kk72tvbg" path="res://scenes/objects/cama.tscn" id="5_4eivp"]
+[ext_resource type="PackedScene" uid="uid://fi7vnvnfdy84" path="res://scenes/objects/mesita.tscn" id="6_2q6cl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5iqjx"]
 
@@ -10,10 +15,14 @@ size = Vector2(1152, 10)
 [node name="Escena_base" type="Node2D" unique_id=442958033]
 position = Vector2(1, 628)
 
+[node name="Suelo" parent="." unique_id=1034777148 instance=ExtResource("3_3f3wo")]
+position = Vector2(-1, -628)
+
 [node name="Plano_trasero" type="Parallax2D" parent="." unique_id=2016372374]
 scroll_scale = Vector2(0.2, 0.2)
 
-[node name="Fondo_lejano" type="Sprite2D" parent="Plano_trasero" unique_id=397664618]
+[node name="Pared" parent="Plano_trasero" unique_id=903606181 instance=ExtResource("1_4ghbg")]
+position = Vector2(-1, -627)
 
 [node name="Capa_juego" type="Node2D" parent="." unique_id=2120215362]
 
@@ -34,5 +43,14 @@ position = Vector2(575, 15)
 shape = SubResource("RectangleShape2D_bx8n8")
 
 [node name="Fondo" type="CollisionShape2D" parent="Capa_juego/Limite_escenario" unique_id=1201922721]
-position = Vector2(575, -484)
+position = Vector2(575, -353)
 shape = SubResource("RectangleShape2D_bx8n8")
+
+[node name="StaticBody2D" parent="." unique_id=1683587738 instance=ExtResource("4_noodr")]
+position = Vector2(16, -459)
+
+[node name="StaticBody2D2" parent="." unique_id=676764765 instance=ExtResource("5_4eivp")]
+position = Vector2(383, -259)
+
+[node name="StaticBody2D3" parent="." unique_id=876002127 instance=ExtResource("6_2q6cl")]
+position = Vector2(307, -294)
