@@ -29,7 +29,7 @@ position = Vector2(-1, -627)
 [node name="Capa_juego" type="Node2D" parent="." unique_id=2120215362]
 
 [node name="Player" parent="Capa_juego" unique_id=73166647 instance=ExtResource("1_sr8v3")]
-position = Vector2(654, -238)
+position = Vector2(163, -536)
 
 [node name="Limite_escenario" type="StaticBody2D" parent="Capa_juego" unique_id=2068482911]
 
