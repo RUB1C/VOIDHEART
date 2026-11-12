@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dfp8n6qonwqjm" path="res://scenes/objects/pared.tscn" id="1_4ghbg"]
 [ext_resource type="PackedScene" uid="uid://cg5l2uo4v27li" path="res://scenes/entities/player.tscn" id="1_sr8v3"]
 [ext_resource type="PackedScene" uid="uid://dq3nu6aeyqx1g" path="res://scenes/objects/suelo.tscn" id="3_3f3wo"]
+[ext_resource type="PackedScene" uid="uid://dvdwi2u3bmqwj" path="res://scenes/objects/audifonos.tscn" id="4_4eivp"]
 [ext_resource type="PackedScene" uid="uid://dsatomfk4muiy" path="res://scenes/objects/armario.tscn" id="4_noodr"]
 [ext_resource type="PackedScene" uid="uid://bl5f7kk72tvbg" path="res://scenes/objects/cama.tscn" id="5_4eivp"]
 [ext_resource type="PackedScene" uid="uid://fi7vnvnfdy84" path="res://scenes/objects/mesita.tscn" id="6_2q6cl"]
@@ -54,3 +55,6 @@ position = Vector2(383, -259)
 
 [node name="StaticBody2D3" parent="." unique_id=876002127 instance=ExtResource("6_2q6cl")]
 position = Vector2(307, -294)
+
+[node name="audifonos" parent="." unique_id=1382283994 instance=ExtResource("4_4eivp")]
+position = Vector2(342, -329)
