@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dfp8n6qonwqjm"]
+
+[node name="Pared" type="Sprite2D" unique_id=903606181]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=243430025]
+offset_right = 1152.0
+offset_bottom = 365.0
+color = Color(0.0068204626, 0.010398829, 0.03763828, 1)
