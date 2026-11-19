@@ -1,9 +1,8 @@
-[gd_scene format=3 uid="uid://dq3nu6aeyqx1g"]
+[gd_scene load_steps=2 format=3 uid="uid://dq3nu6aeyqx1g"]
 
-[node name="Suelo" type="Sprite2D" unique_id=1034777148]
+[ext_resource type="Texture2D" path="res://assets/environments/suelo_habitacion.png" id="1_tex"]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=243430025]
-offset_top = 365.0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.049971953, 0.077463485, 0.09735244, 1)
+[node name="Suelo" type="Sprite2D"]
+position = Vector2(0, 365)
+texture = ExtResource("1_tex")
+centered = false

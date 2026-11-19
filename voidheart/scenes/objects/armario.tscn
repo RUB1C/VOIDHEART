@@ -1,15 +1,16 @@
-[gd_scene format=3 uid="uid://dsatomfk4muiy"]
+[gd_scene load_steps=3 format=3 uid="uid://dsatomfk4muiy"]
+
+[ext_resource type="Texture2D" path="res://assets/environments/armario.png" id="1_tex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4edk5"]
-size = Vector2(200, 250)
+size = Vector2(184, 34)
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1683587738]
+[node name="Armario" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1624322478]
-position = Vector2(100, 125)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(100, 232)
 shape = SubResource("RectangleShape2D_4edk5")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=243430025]
-offset_right = 200.0
-offset_bottom = 250.0
-color = Color(0.12097684, 0.05456876, 0.0071524763, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(100, 125)
+texture = ExtResource("1_tex")

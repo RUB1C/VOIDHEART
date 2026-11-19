@@ -1,0 +1,18 @@
+~ start
+if not GameManager.hablo_con_npc
+	set GameManager.hablo_con_npc = true
+	???: ¿A dónde vas tan temprano?
+	Protagonista: Al colegio. ¿Acaso olvidas que estudio?
+	???: No lo olvido... solo me sorprende verte salir a esta hora.
+	???: Te recomiendo que vayas con cuidado. He escuchado ciertas cosas sobre ti.
+	- ¡¿Qué cosas?! ¡No te metas en mi vida!
+		do GameManager.cambiar_estres(5)
+		???: Justamente eso... te enojas por cualquier cosa.
+		=> END
+	- La verdad, no me importa lo que digan. Solo trato de mantenerme tranquilo.
+		do GameManager.cambiar_estres(-5)
+		???: Eso está bien. Sigue así.
+		=> END
+else
+	???: Ten cuidado allá afuera.
+	=> END

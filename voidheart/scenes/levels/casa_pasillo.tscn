@@ -1,0 +1,98 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scripts/nivel_spawn.gd" id="1_spawn"]
+[ext_resource type="PackedScene" uid="uid://cg5l2uo4v27li" path="res://scenes/entities/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://scenes/entities/npc.tscn" id="3_npc"]
+[ext_resource type="PackedScene" path="res://scenes/objects/puerta.tscn" id="4_puerta"]
+[ext_resource type="Texture2D" path="res://assets/environments/fondo_pasillo.png" id="5_fondo"]
+[ext_resource type="Texture2D" path="res://assets/environments/suelo_pasillo.png" id="6_suelo"]
+[ext_resource type="Texture2D" path="res://assets/environments/pared_lateral_izq.png" id="7_pizq"]
+[ext_resource type="Texture2D" path="res://assets/environments/pared_lateral_der.png" id="8_pder"]
+[ext_resource type="Texture2D" path="res://assets/sprites/luz_radial.png" id="9_luz"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lim_h"]
+size = Vector2(1152, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lim_v"]
+size = Vector2(60, 620)
+
+[node name="CasaPasillo" type="Node2D"]
+position = Vector2(1, 628)
+script = ExtResource("1_spawn")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.52, 0.57, 0.66, 1)
+
+[node name="SueloPasillo" type="Sprite2D" parent="."]
+position = Vector2(-1, -263)
+texture = ExtResource("6_suelo")
+centered = false
+
+[node name="Plano_trasero" type="Node2D" parent="."]
+
+[node name="FondoPasillo" type="Sprite2D" parent="Plano_trasero"]
+position = Vector2(-1, -628)
+texture = ExtResource("5_fondo")
+centered = false
+
+[node name="LuzTechoCentro" type="PointLight2D" parent="."]
+position = Vector2(576, -420)
+color = Color(0.56, 0.66, 0.76, 1)
+energy = 1.0
+texture = ExtResource("9_luz")
+texture_scale = 2.8
+
+[node name="PuertaHabitacion" parent="." instance=ExtResource("4_puerta")]
+position = Vector2(155, -365)
+escena_destino = "res://scenes/levels/habitacion.tscn"
+spawn_destino = "desde_pasillo"
+
+[node name="PuertaSalidaCasa" parent="." instance=ExtResource("4_puerta")]
+position = Vector2(995, -365)
+es_salida_final = true
+
+[node name="Capa_juego" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="ParedLateralIzq" type="Sprite2D" parent="Capa_juego"]
+position = Vector2(-1, -264)
+texture = ExtResource("7_pizq")
+centered = false
+offset = Vector2(0, -364)
+
+[node name="ParedLateralDer" type="Sprite2D" parent="Capa_juego"]
+position = Vector2(-1, -264)
+texture = ExtResource("8_pder")
+centered = false
+offset = Vector2(0, -364)
+
+[node name="NPC" parent="Capa_juego" instance=ExtResource("3_npc")]
+position = Vector2(560, -165)
+
+[node name="Player" parent="Capa_juego" instance=ExtResource("2_player")]
+position = Vector2(165, -195)
+
+[node name="Limite_escenario" type="StaticBody2D" parent="."]
+
+[node name="Primer_plano" type="CollisionShape2D" parent="Limite_escenario"]
+position = Vector2(575, 12)
+shape = SubResource("RectangleShape2D_lim_h")
+
+[node name="Fondo" type="CollisionShape2D" parent="Limite_escenario"]
+position = Vector2(575, -253)
+shape = SubResource("RectangleShape2D_lim_h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite_escenario"]
+position = Vector2(46, -315)
+rotation = 0.22
+shape = SubResource("RectangleShape2D_lim_v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limite_escenario"]
+position = Vector2(1104, -315)
+rotation = -0.22
+shape = SubResource("RectangleShape2D_lim_v")
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="desde_habitacion" type="Marker2D" parent="Spawns"]
+position = Vector2(165, -195)

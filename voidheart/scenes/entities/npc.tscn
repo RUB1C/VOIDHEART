@@ -1,0 +1,146 @@
+[gd_scene load_steps=28 format=3]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npc"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0001.png" id="tex_1"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0002.png" id="tex_2"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0003.png" id="tex_3"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0004.png" id="tex_4"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0005.png" id="tex_5"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0006.png" id="tex_6"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0007.png" id="tex_7"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0008.png" id="tex_8"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0009.png" id="tex_9"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0010.png" id="tex_10"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0011.png" id="tex_11"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0012.png" id="tex_12"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0013.png" id="tex_13"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0014.png" id="tex_14"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0015.png" id="tex_15"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0016.png" id="tex_16"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0017.png" id="tex_17"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0018.png" id="tex_18"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0019.png" id="tex_19"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0020.png" id="tex_20"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0021.png" id="tex_21"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0022.png" id="tex_22"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0023.png" id="tex_23"]
+[ext_resource type="Texture2D" path="res://assets/idle/sprites_idle0024.png" id="tex_24"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_npc"]
+radius = 95.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc_body"]
+size = Vector2(44, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_npc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("tex_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("tex_24")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 24.0
+}]
+
+[node name="NPC" type="Area2D"]
+script = ExtResource("1_npc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_npc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.68, 0.74, 0.82, 1)
+position = Vector2(0, -54.6)
+scale = Vector2(0.314, 0.31)
+sprite_frames = SubResource("SpriteFrames_npc")
+animation = &"idle"
+flip_h = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -135.0
+offset_right = 20.0
+offset_bottom = -85.0
+theme_override_colors/font_color = Color(0.486, 0.62, 0.698, 1)
+theme_override_font_sizes/font_size = 36
+text = "E"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+
+[node name="CuerpoFisico" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CuerpoFisico"]
+shape = SubResource("RectangleShape2D_npc_body")

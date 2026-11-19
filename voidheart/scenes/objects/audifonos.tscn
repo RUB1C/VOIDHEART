@@ -1,23 +1,37 @@
-[gd_scene format=3 uid="uid://dvdwi2u3bmqwj"]
+[gd_scene load_steps=5 format=3 uid="uid://dvdwi2u3bmqwj"]
 
-[ext_resource type="Script" uid="uid://qrb6awtua3fd" path="res://scripts/audifonos.gd" id="1_n8lwo"]
+[ext_resource type="Script" path="res://scripts/audifonos.gd" id="1_n8lwo"]
+[ext_resource type="Texture2D" path="res://assets/sprites/audifonos.png" id="2_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/luz_radial.png" id="3_luz"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
-radius = 71.02816
+radius = 85.0
 
-[node name="audifonos" type="Area2D" unique_id=1382283994]
+[node name="audifonos" type="Area2D"]
 script = ExtResource("1_n8lwo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=753732746]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5h11f")
 
-[node name="Label" type="Label" parent="." unique_id=912260911]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -68)
+texture = ExtResource("2_tex")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -68)
+color = Color(0.486, 0.62, 0.698, 1)
+energy = 0.9
+texture = ExtResource("3_luz")
+texture_scale = 0.65
+
+[node name="Label" type="Label" parent="."]
 visible = false
 offset_left = -20.0
-offset_top = -123.0
+offset_top = -140.0
 offset_right = 20.0
-offset_bottom = -65.0
-theme_override_font_sizes/font_size = 42
+offset_bottom = -90.0
+theme_override_colors/font_color = Color(0.486, 0.62, 0.698, 1)
+theme_override_font_sizes/font_size = 36
 text = "E"
 horizontal_alignment = 1
 
