@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://p6i2rsoiwsma"]
+
+[ext_resource type="Texture2D" uid="uid://15fp360pigdc" path="res://assets/Sprites/Armchair/Sprite-0004.png" id="1_bd3ub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8p72u"]
+size = Vector2(94, 84)
+
+[node name="Node2D" type="StaticBody2D" unique_id=355183119]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1711443327]
+position = Vector2(88, 159)
+shape = SubResource("RectangleShape2D_8p72u")
+
+[node name="Sprite0004" type="Sprite2D" parent="." unique_id=1375996471]
+position = Vector2(102, 137)
+scale = Vector2(3, 3)
+texture = ExtResource("1_bd3ub")
