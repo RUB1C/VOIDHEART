@@ -17,14 +17,14 @@ size = Vector2(119.260445, 641.3329)
 [node name="Escena_base" type="Node2D" unique_id=442958033]
 position = Vector2(1, 628)
 
-[node name="Suelo" parent="." unique_id=1034777148 instance=ExtResource("3_3f3wo")]
-position = Vector2(-1, -628)
-
 [node name="Plano_trasero" type="Parallax2D" parent="." unique_id=2016372374]
 scroll_scale = Vector2(0.2, 0.2)
 
 [node name="Pared" parent="Plano_trasero" unique_id=903606181 instance=ExtResource("1_4ghbg")]
 position = Vector2(-1, -627)
+
+[node name="Suelo" parent="." unique_id=1034777148 instance=ExtResource("3_3f3wo")]
+position = Vector2(8, -523)
 
 [node name="Capa_juego" type="Node2D" parent="." unique_id=2120215362]
 
@@ -54,13 +54,13 @@ scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_5h11f")
 
 [node name="StaticBody2D" parent="." unique_id=1683587738 instance=ExtResource("4_noodr")]
-position = Vector2(16, -459)
+position = Vector2(986, -387)
 
 [node name="StaticBody2D2" parent="." unique_id=676764765 instance=ExtResource("5_4eivp")]
-position = Vector2(383, -259)
+position = Vector2(374, -255)
 
 [node name="StaticBody2D3" parent="." unique_id=876002127 instance=ExtResource("6_2q6cl")]
-position = Vector2(307, -294)
+position = Vector2(279, -250)
 
 [node name="audifonos" parent="." unique_id=1382283994 instance=ExtResource("4_4eivp")]
-position = Vector2(342, -329)
+position = Vector2(304, -226)

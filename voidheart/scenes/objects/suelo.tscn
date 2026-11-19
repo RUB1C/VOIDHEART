@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dq3nu6aeyqx1g"]
 
+[ext_resource type="Texture2D" uid="uid://tmq4yq8p31s2" path="res://assets/Sprites/Floor/pixel-0025-3640231022.png" id="1_wmn6q"]
+
 [node name="Suelo" type="Sprite2D" unique_id=1034777148]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=243430025]
-offset_top = 365.0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.049971953, 0.077463485, 0.09735244, 1)
+[node name="Pixel00253640231022" type="Sprite2D" parent="." unique_id=1610354736]
+position = Vector2(560, 559)
+rotation = 3.1415927
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_wmn6q")

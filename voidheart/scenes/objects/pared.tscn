@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://dfp8n6qonwqjm"]
 
+[ext_resource type="Texture2D" uid="uid://d2vpmybrfpo3x" path="res://assets/Sprites/Wall/pixel-0018-2306187975.png" id="1_n1bg6"]
+
 [node name="Pared" type="Sprite2D" unique_id=903606181]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=243430025]
 offset_right = 1152.0
 offset_bottom = 365.0
 color = Color(0.0068204626, 0.010398829, 0.03763828, 1)
+
+[node name="Pixel00182306187975" type="Sprite2D" parent="." unique_id=481393840]
+position = Vector2(577, 157)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("1_n1bg6")
