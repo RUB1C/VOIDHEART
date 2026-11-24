@@ -26,8 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://2g1p2kiey6in" path="res://assets/idle/sprites_idle0022.png" id="24_ufll5"]
 [ext_resource type="Texture2D" uid="uid://ra8n5iyc8wwl" path="res://assets/idle/sprites_idle0023.png" id="25_sepq8"]
 [ext_resource type="Texture2D" uid="uid://dmqd81qomy06n" path="res://assets/idle/sprites_idle0024.png" id="26_sbcfq"]
-
-[ext_resource type="Texture2D" path="res://assets/sprites/luz_radial.png" id="99_luz"]
+[ext_resource type="Texture2D" uid="uid://b5ujydydhiimj" path="res://assets/sprites/luz_radial.png" id="99_luz"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
 size = Vector2(44, 22)
@@ -116,7 +115,6 @@ animations = [{
 script = ExtResource("1_ucweq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1151208202]
-position = Vector2(0, 0)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_5h11f")
 
@@ -135,10 +133,10 @@ sprite_frames = SubResource("SpriteFrames_hchaj")
 animation = &"idle"
 frame_progress = 0.064985715
 
-[node name="SonidoPasos" type="AudioStreamPlayer2D" parent="."]
+[node name="SonidoPasos" type="AudioStreamPlayer2D" parent="." unique_id=2018653891]
 position = Vector2(0, 10)
 
-[node name="LuzAudifonos" type="PointLight2D" parent="."]
+[node name="LuzAudifonos" type="PointLight2D" parent="." unique_id=1322875282]
 position = Vector2(0, -60)
 color = Color(0.486, 0.62, 0.698, 1)
 energy = 0.0
