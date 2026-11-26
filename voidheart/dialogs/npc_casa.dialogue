@@ -1,11 +1,33 @@
-~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+ ~ start
+if not GameManager.hablo_con_npc:
+	set GameManager.hablo_con_npc = true
+Jhonny: M...¿Mamá?
+Jhonny: ¿Porque te ves tan extraña mamá?
+???: .....
+???: ..Jhonny....
+Jhonny: ...¿Mamá?, me estas asustando..
+???: .¿Jhonny?.. hijo ¡reacciona!
+???: Aquí estoy cariño respira
+Mamá: ¿Estas bien hijo?
+Jhonny: ¿Qué pasa conmigo mami?
+Jhonny: No entiendo porque me pasa esto, no se nada, nunca recuerdo nada...
+Mamá: Hijo...
+Jhonny: Es un constante dolor mamá, la gente me desprecia, papá no está, tengo constantes pesadillas, estoy solo...
+Jhonny: Ahora... ahora tambien empiezo a ver cosas, sombras, ¿qué está pasando? 
+Mamá: Sabes que la vida nunca nos ha tratado de la mejor manera hijo
+Mamá: La gente puede ser cruel, papá falleció en el accidente, tus pesadillas se incrementan, tu soledad me preocupa..
+- Solo afirmaste lo que dije..
+	Jhonny: Solo afirmaste lo que dije..
+	Mamá: Lo siento Jhonny, no queria que lo tomaras así, me refiero a que tienes razón, entiendo el dolor por el que puedes estar pasando
+- No se que más hacer
+	Jhonny: No se que más hacer
+	Mamá: Pase lo que pase, estaremos juntos, me tienes a mi hijo..
+	Jhonny: ..gracias mamá
+Mamá: Por ahora solo queda ser pacientes
+Mamá: A pesar de todo no cambies quien eres, se fuerte
+Mamá: Se valiente y bondadoso
+Mamá: Bien, ahora, es tu ultima semana de clase, ¿todo listo?
+- Ultima semana, ¡Lo había olvidado!
+	do GameManager.cambiar_estres(5.0)
+	Ultima semana, ¡Lo habia olvidado!
 => END
