@@ -1,18 +1,33 @@
-~ start
-if not GameManager.hablo_con_npc
+ ~ start
+if not GameManager.hablo_con_npc:
 	set GameManager.hablo_con_npc = true
-	???: ¿A dónde vas tan temprano?
-	Protagonista: Al colegio. ¿Acaso olvidas que estudio?
-	???: No lo olvido... solo me sorprende verte salir a esta hora.
-	???: Te recomiendo que vayas con cuidado. He escuchado ciertas cosas sobre ti.
-	- ¡¿Qué cosas?! ¡No te metas en mi vida!
-		do GameManager.cambiar_estres(5)
-		???: Justamente eso... te enojas por cualquier cosa.
-		=> END
-	- La verdad, no me importa lo que digan. Solo trato de mantenerme tranquilo.
-		do GameManager.cambiar_estres(-5)
-		???: Eso está bien. Sigue así.
-		=> END
-else
-	???: Ten cuidado allá afuera.
-	=> END
+Jhonny: M...¿Mamá?
+Jhonny: ¿Porque te ves tan extraña mamá?
+???: .....
+???: ..Jhonny....
+Jhonny: ...¿Mamá?, me estas asustando..
+???: .¿Jhonny?.. hijo ¡reacciona!
+???: Aquí estoy cariño respira
+Mamá: ¿Estas bien hijo?
+Jhonny: ¿Qué pasa conmigo mami?
+Jhonny: No entiendo porque me pasa esto, no se nada, nunca recuerdo nada...
+Mamá: Hijo...
+Jhonny: Es un constante dolor mamá, la gente me desprecia, papá no está, tengo constantes pesadillas, estoy solo...
+Jhonny: Ahora... ahora tambien empiezo a ver cosas, sombras, ¿qué está pasando? 
+Mamá: Sabes que la vida nunca nos ha tratado de la mejor manera hijo
+Mamá: La gente puede ser cruel, papá falleció en el accidente, tus pesadillas se incrementan, tu soledad me preocupa..
+- Solo afirmaste lo que dije..
+	Jhonny: Solo afirmaste lo que dije..
+	Mamá: Lo siento Jhonny, no queria que lo tomaras así, me refiero a que tienes razón, entiendo el dolor por el que puedes estar pasando
+- No se que más hacer
+	Jhonny: No se que más hacer
+	Mamá: Pase lo que pase, estaremos juntos, me tienes a mi hijo..
+	Jhonny: ..gracias mamá
+Mamá: Por ahora solo queda ser pacientes
+Mamá: A pesar de todo no cambies quien eres, se fuerte
+Mamá: Se valiente y bondadoso
+Mamá: Bien, ahora, es tu ultima semana de clase, ¿todo listo?
+- Ultima semana, ¡Lo había olvidado!
+	do GameManager.cambiar_estres(5.0)
+	Ultima semana, ¡Lo habia olvidado!
+=> END

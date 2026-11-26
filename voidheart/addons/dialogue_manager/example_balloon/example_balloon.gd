@@ -88,12 +88,12 @@ func _ready() -> void:
 		start()
 
 	# EXAMPLE MESSAGE
-	var warning: Button = Button.new()
-	warning.text = DMConstants.translate("This is an example balloon. Create your own balloon in 'Project > Tools > Dialogue > Create Balloon...'")
-	warning.disabled = true
-	warning.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
-	balloon.add_child(warning)
-	balloon.move_child(warning, 0)
+	#var warning: Button = Button.new()
+	#warning.text = DMConstants.translate("This is an example balloon. Create your own balloon in 'Project > Tools > Dialogue > Create Balloon...'")
+	#warning.disabled = true
+	#warning.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	#balloon.add_child(warning)
+	#balloon.move_child(warning, 0)
 	# /EXAMPLE MESSAGE
 
 
